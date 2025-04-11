@@ -49,17 +49,19 @@ document.querySelector("#orig").addEventListener("click", function() {
 	video.classList.remove('oldSchool');
 });
 
-// document.querySelector("#slower").addEventListener("click", function() {
-// 	console.log("Slow Down Video");
-// 	video.
-// });
+document.querySelector("#slower").addEventListener("click", function() {
+	console.log("Slow down video");
+	console.log(`Speed is ${this.value/100}`);
+});
 
-// document.querySelector("#faster").addEventListener("click", function() {
-// 	console.log("Speed Up Video");
-// });
+document.querySelector("#faster").addEventListener("click", function() {
+	console.log("Speed up video");
+	console.log(`Speed is ${this.value/100}`);
+});
 
 // document.querySelector("#skip").addEventListener("click", function() {
-// 	console.log("Skip Ahead Video");
+// 	console.log("Skip ahead");
+// 	console.log(`Video current time is ${this.value/100}`);
 // });
 
 
