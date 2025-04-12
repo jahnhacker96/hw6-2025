@@ -1,6 +1,4 @@
 var video;
-const volumeSlider = document.querySelector("#slider");
-const volumeDisplay = document.querySelector("#volume");
 
 // Loads video
 window.addEventListener("load", function() {
@@ -13,6 +11,7 @@ window.addEventListener("load", function() {
 
 // Plays video when Play button is clicked
 document.querySelector("#play").addEventListener("click", function() {
+	// Displays video volume when Play button is clicked
 	document.querySelector("#volume").textContent = (video.volume * 100) + "%";
 	console.log("Play Video")
 	video.play();
@@ -66,12 +65,11 @@ document.querySelector("#mute").addEventListener("click", function() {
 });
 
 // Changes the volume when utilizing the volume slider
-volumeSlider.addEventListener("input", function () {
-	const currentVolume = this.value / 100;
-	video.volume = currentVolume;
-	volumeDisplay.textContent = this.value + "%";
-	console.log(`The current value is ${this.value/100}`);
-// Used this website for reference:https://www.showwcase.com/article/34002/volumechange
+document.querySelector("#slider").addEventListener("input", function () {
+	console.log("Volume change")
+	video.volume = this.value/100;
+	document.querySelector("#volume").textContent = (video.volume * 100) + "%";
+// referenced code from w3schools: https://www.w3schools.com/tags/ref_av_dom.asp
   });
 
 // Changes the video into old school style
