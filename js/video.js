@@ -55,15 +55,14 @@ document.querySelector("#skip").addEventListener("click", function() {
 
 // Mutes/unmute video when Mute button is clicked
 document.querySelector("#mute").addEventListener("click", function() {
+	console.log("Mute Video");
 	if (video.muted==false){
   	video.muted = true;
 	document.querySelector("#mute").innerHTML = "Mute";
-	console.log("Mute Video");
 	}
 	else{
 	video.muted = false;
 	document.querySelector("#mute").innerHTML = "Unmute";
-	console.log("Unmute Video");
     }
 // Used Stackoverflow for code:https://stackoverflow.com/questions/33060291/video-mute-unmute-button-javascript
 });
