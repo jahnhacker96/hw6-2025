@@ -18,7 +18,7 @@ document.querySelector("#play").addEventListener("click", function() {
 	// code from lecture
 });
 
-// Pauses video when Slow down is clicked
+// Pauses video when Pause is clicked
 document.querySelector("#pause").addEventListener("click", function() {
 	console.log("Pause Video");
 	video.pause();
