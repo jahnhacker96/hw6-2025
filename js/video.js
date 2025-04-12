@@ -28,7 +28,7 @@ document.querySelector("#pause").addEventListener("click", function() {
 // Slows down video when Slow Down button is clicked
 document.querySelector("#slower").addEventListener("click", function() {
 	console.log("Slow Down Video");
-	video.playbackRate *= 0.90;
+	video.playbackRate /= 0.90;
 	console.log("Speed is" + video.playbackRate);
 	// referenced code from w3 schools:https://www.w3schools.com/tags/av_prop_playbackrate.asp
 });
@@ -36,7 +36,7 @@ document.querySelector("#slower").addEventListener("click", function() {
 // Speeds up video when Speeds Up button is clicked
 document.querySelector("#faster").addEventListener("click", function() {
 	console.log("Speed Up Video");
-	video.playbackRate /= 0.90;
+	video.playbackRate *= 0.90;
 	console.log("Speed is" + video.playbackRate);
 	// referenced code from w3 schools:https://www.w3schools.com/tags/av_prop_playbackrate.asp
 });
