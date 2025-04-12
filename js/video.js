@@ -11,12 +11,9 @@ window.addEventListener("load", function() {
 // code from lecture
 });
 
-// Updates volume information when video plays
-document.querySelector("#volume").textContent = (video.volume * 100) + "%";
-// code from lecture
-
 // Plays video when Play button is clicked
 document.querySelector("#play").addEventListener("click", function() {
+	document.querySelector("#volume").textContent = (video.volume * 100) + "%";
 	console.log("Play Video")
 	video.play();
 	// code from lecture
